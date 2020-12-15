@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(230, 203, 97);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Segoe UI";
+  font-size: 1.5rem;
+}
+
+.link1,
+.link2 {
+  position: relative;
+}
+
+.link1 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  bottom: -2px;
+  background: black;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.link1 a:hover::after {
+  width: 100%;
+}
+
+.link2 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  bottom: -2px;
+  background: black;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.link2 a:hover::after {
+  width: 100%;
+  left: 0;
+}
